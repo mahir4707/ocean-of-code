@@ -2,6 +2,10 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import aiDashboard from "@/assets/project-ai-dashboard.jpg";
+import oceanExplorer from "@/assets/project-ocean-explorer.jpg";
+import ecommerce from "@/assets/project-ecommerce.jpg";
+import chatApp from "@/assets/project-chat-app.jpg";
 
 const projects = [
   {
@@ -9,25 +13,25 @@ const projects = [
     description:
       "Real-time data visualization platform with machine learning insights",
     tags: ["React", "Python", "TensorFlow", "D3.js"],
-    gradient: "from-blue-500 to-purple-600",
+    image: aiDashboard,
   },
   {
     title: "3D Ocean Explorer",
     description: "Interactive WebGL experience showcasing marine ecosystems",
     tags: ["Three.js", "React", "WebGL", "GSAP"],
-    gradient: "from-cyan-500 to-blue-600",
+    image: oceanExplorer,
   },
   {
     title: "E-Commerce Platform",
     description: "Full-stack marketplace with payment integration",
     tags: ["Next.js", "Node.js", "PostgreSQL", "Stripe"],
-    gradient: "from-green-500 to-teal-600",
+    image: ecommerce,
   },
   {
     title: "Real-Time Chat Application",
     description: "Scalable messaging platform with WebSocket support",
     tags: ["React", "Socket.io", "Redis", "MongoDB"],
-    gradient: "from-pink-500 to-rose-600",
+    image: chatApp,
   },
 ];
 
@@ -70,13 +74,13 @@ const ProjectsSection = () => {
               whileHover={{ scale: 1.03 }}
               className="glass-card rounded-2xl overflow-hidden group cursor-pointer"
             >
-              <div
-                className={`h-48 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}
-              >
+              <div className="h-48 relative overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 border-4 border-white/30 rounded-full animate-pulse" />
-                </div>
               </div>
 
               <div className="p-6">
