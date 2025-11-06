@@ -6,6 +6,10 @@ import carSales from "@/assets/project-car-sales.jpg";
 import amazonSales from "@/assets/project-amazon-sales.jpg";
 import sqlAnalytics from "@/assets/project-sql-analytics.jpg";
 import imdbDashboard from "@/assets/project-imdb-dashboard.jpg";
+import weatherApp from "@/assets/project-weather-app.jpg";
+import textSummarizer from "@/assets/project-text-summarizer.jpg";
+import openaiChatbot from "@/assets/project-openai-chatbot.jpg";
+import changeMaker from "@/assets/project-change-maker.jpg";
 
 const projects = [
   {
@@ -38,6 +42,38 @@ const projects = [
     description: "Dashboard visualizing movie ratings, genres, and revenues",
     tags: ["Tableau", "Data Visualization", "Entertainment Analytics"],
     image: imdbDashboard,
+    demoLink: "#",
+    codeLink: "#",
+  },
+  {
+    title: "Weather App using API",
+    description: "Dynamic real-time weather tracker fetching live data using weather APIs",
+    tags: ["API", "JavaScript", "Weather Data", "Real-time"],
+    image: weatherApp,
+    demoLink: "#",
+    codeLink: "#",
+  },
+  {
+    title: "Text Summarizer using API",
+    description: "Web tool that condenses text using NLP API",
+    tags: ["NLP", "API", "AI", "Text Processing"],
+    image: textSummarizer,
+    demoLink: "#",
+    codeLink: "#",
+  },
+  {
+    title: "OpenAI Chatbot",
+    description: "Interactive AI chatbot built with OpenAI API for Q&A and assistance",
+    tags: ["OpenAI", "Chatbot", "AI", "NLP"],
+    image: openaiChatbot,
+    demoLink: "#",
+    codeLink: "#",
+  },
+  {
+    title: "Change Maker Game",
+    description: "Game concept solving the change-making problem using dynamic programming visualization",
+    tags: ["Game Dev", "Algorithms", "Dynamic Programming", "Visualization"],
+    image: changeMaker,
     demoLink: "#",
     codeLink: "#",
   },

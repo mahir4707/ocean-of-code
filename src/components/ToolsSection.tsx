@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { FileText, Table, Presentation, BarChart3, PieChart, Bot, Palette, Code2, FileCode2 } from "lucide-react";
+import { FileText, Table, Presentation, BarChart3, PieChart, Bot, Palette, Code2, FileCode2, Database } from "lucide-react";
 
 const tools = [
   {
@@ -56,6 +56,12 @@ const tools = [
     icon: FileCode2,
     description: "Code editing and development platform",
     color: "from-cyan-500 to-blue-600",
+  },
+  {
+    name: "PostgreSQL",
+    icon: Database,
+    description: "Advanced relational database and query management",
+    color: "from-blue-600 to-indigo-600",
   },
 ];
 

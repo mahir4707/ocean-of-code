@@ -44,16 +44,20 @@ const HeroSection = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background"></div>
 
-      {/* Enhanced Sun Glow */}
-      <div className="absolute top-20 right-1/4 w-48 h-48 bg-yellow-200/30 rounded-full blur-3xl"></div>
-      <div className="absolute top-16 right-1/4 w-32 h-32 bg-yellow-100/40 rounded-full blur-2xl"></div>
+      {/* Enhanced Larger and Brighter Sun */}
+      <div className="absolute top-12 right-1/4 w-64 h-64 bg-yellow-100/50 rounded-full blur-3xl"></div>
+      <div className="absolute top-8 right-1/4 w-48 h-48 bg-yellow-50/60 rounded-full blur-2xl"></div>
+      <div className="absolute top-10 right-1/4 w-32 h-32 bg-white/40 rounded-full blur-xl"></div>
+      
+      {/* Sunlight reflection on water */}
+      <div className="absolute top-1/3 right-1/4 w-96 h-2 bg-yellow-100/20 rounded-full blur-2xl transform rotate-12"></div>
 
-      {/* Large Background Text - Repositioned */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ top: '-10%' }}>
+      {/* Single DISCIPLINE Text - Centered, Top Half Visible */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ top: '-15%' }}>
         <h1
           className="text-[12rem] md:text-[18rem] lg:text-[24rem] font-black tracking-wider select-none"
           style={{
-            color: "rgba(255, 255, 255, 0.15)",
+            color: "rgba(255, 255, 255, 0.25)",
             textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
           }}
         >
@@ -64,7 +68,9 @@ const HeroSection = () => {
       {/* Content */}
       <div ref={textRef} className="relative z-10 text-center px-6">
         <h2 className="text-5xl md:text-7xl font-bold mb-4 text-white drop-shadow-2xl">
-          <span className="block text-gradient">To the Deep End</span>
+          <span className="block text-gradient" style={{ textShadow: "0 0 30px rgba(6, 182, 212, 0.5)" }}>
+            Hello, Deep Thinker.
+          </span>
         </h2>
         <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto drop-shadow-lg">
           Dive into a world of creativity, discipline, and innovation

@@ -32,18 +32,17 @@ const Navigation = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path 
-              d="M12 2L2 7L12 12L22 7L12 2Z" 
-              fill="url(#waveGradient)" 
-              opacity="0.8"
+              d="M12 2L4 8L12 14L20 8L12 2Z" 
+              fill="url(#icebergGradient)" 
+              opacity="0.9"
             />
             <path 
-              d="M2 17L12 22L22 17" 
-              stroke="url(#waveGradient)" 
-              strokeWidth="2" 
-              strokeLinecap="round"
+              d="M4 16L12 22L20 16" 
+              fill="url(#icebergGradient)" 
+              opacity="0.6"
             />
             <defs>
-              <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <linearGradient id="icebergGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#06b6d4" />
                 <stop offset="100%" stopColor="#3b82f6" />
               </linearGradient>
@@ -83,19 +82,20 @@ const Navigation = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-accent/20 rounded-full animate-pulse"></div>
             <svg 
-              className="w-6 h-6 relative z-10 animate-wave" 
+              className="w-6 h-6 relative z-10" 
               viewBox="0 0 24 24" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"
             >
+              <ellipse cx="12" cy="18" rx="8" ry="4" fill="url(#jellyfishGradient)" opacity="0.3"/>
               <path 
-                d="M2 12C2 12 5 8 8 12C11 16 13 8 16 12C19 16 22 12 22 12" 
-                stroke="url(#compassGradient)" 
-                strokeWidth="2" 
-                strokeLinecap="round"
+                d="M12 4C14 4 16 6 16 9C16 12 14 14 12 18C10 14 8 12 8 9C8 6 10 4 12 4Z" 
+                fill="url(#jellyfishGradient)" 
+                opacity="0.8"
               />
+              <path d="M10 18L9 22M12 18L12 22M14 18L15 22" stroke="url(#jellyfishGradient)" strokeWidth="1.5" opacity="0.6"/>
               <defs>
-                <linearGradient id="compassGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <linearGradient id="jellyfishGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="#06b6d4" />
                   <stop offset="100%" stopColor="#3b82f6" />
                 </linearGradient>
