@@ -66,16 +66,16 @@ const projects = [
     description: "Interactive AI chatbot built with OpenAI API for Q&A and assistance",
     tags: ["OpenAI", "Chatbot", "AI", "NLP"],
     image: openaiChatbot,
-    demoLink: "#",
-    codeLink: "#",
+    demoLink: "https://github.com/mahir4707/OpenAI-Chatbot",
+    codeLink: "https://github.com/mahir4707/OpenAI-Chatbot",
   },
   {
     title: "Change Maker Game",
     description: "Game concept solving the change-making problem using dynamic programming visualization",
     tags: ["Game Dev", "Algorithms", "Dynamic Programming", "Visualization"],
     image: changeMaker,
-    demoLink: "#",
-    codeLink: "#",
+    demoLink: "https://mahir4707.github.io/change-maker-game/",
+    codeLink: "https://github.com/mahir4707/change-maker-game",
   },
 ];
 
