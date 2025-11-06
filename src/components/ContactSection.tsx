@@ -144,9 +144,15 @@ const ContactSection = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="text-center mt-16 pt-8 border-t border-white/10"
+          className="text-center mt-16 pt-8 border-t border-white/10 relative"
         >
-          <p className="text-white/50">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-accent/5 to-transparent animate-wave"></div>
+          </div>
+          <p className="text-white/80 text-lg mb-3 font-medium relative z-10" style={{ textShadow: '0 0 20px rgba(6, 182, 212, 0.3)' }}>
+            Made by Mahir — Crafted with Depth and Creativity
+          </p>
+          <p className="text-white/50 relative z-10">
             © 2025 Portfolio. Built with discipline and creativity.
           </p>
         </motion.div>

@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import SkillsSection from "@/components/SkillsSection";
+import ToolsSection from "@/components/ToolsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 
@@ -20,6 +21,7 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <SkillsSection />
+      <ToolsSection />
       <ProjectsSection />
       <ContactSection />
     </div>

@@ -1,49 +1,35 @@
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { Code2, Database, Globe, Blocks, Brain, Terminal } from "lucide-react";
+import { FileCode, Coffee, FileType, Database } from "lucide-react";
 
 const skills = [
   {
-    name: "JavaScript",
-    icon: Code2,
-    level: 95,
-    description: "Full-stack development with modern frameworks",
-    color: "from-yellow-400 to-yellow-600",
+    name: "C",
+    icon: FileCode,
+    level: 90,
+    description: "System programming and performance optimization",
+    color: "from-blue-400 to-cyan-500",
+  },
+  {
+    name: "Java",
+    icon: Coffee,
+    level: 60,
+    description: "Object-oriented programming and enterprise solutions",
+    color: "from-cyan-400 to-blue-500",
   },
   {
     name: "Python",
-    icon: Terminal,
-    level: 90,
-    description: "Data science, AI/ML, and automation",
-    color: "from-blue-400 to-blue-600",
-  },
-  {
-    name: "React",
-    icon: Globe,
-    level: 95,
-    description: "Building interactive and scalable UIs",
-    color: "from-cyan-400 to-cyan-600",
+    icon: FileType,
+    level: 86,
+    description: "Data analysis, automation, and scripting",
+    color: "from-blue-500 to-indigo-500",
   },
   {
     name: "SQL",
     icon: Database,
-    level: 85,
-    description: "Database design and optimization",
-    color: "from-green-400 to-green-600",
-  },
-  {
-    name: "Three.js",
-    icon: Blocks,
-    level: 80,
-    description: "3D graphics and WebGL experiences",
-    color: "from-purple-400 to-purple-600",
-  },
-  {
-    name: "AI/ML",
-    icon: Brain,
-    level: 75,
-    description: "Machine learning and neural networks",
-    color: "from-pink-400 to-pink-600",
+    level: 90,
+    description: "Database design, queries, and optimization",
+    color: "from-cyan-500 to-teal-500",
   },
 ];
 
@@ -92,7 +78,7 @@ const SkillsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {skills.map((skill, index) => {
             const Icon = skill.icon;
             return (

@@ -2,36 +2,44 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import aiDashboard from "@/assets/project-ai-dashboard.jpg";
-import oceanExplorer from "@/assets/project-ocean-explorer.jpg";
-import ecommerce from "@/assets/project-ecommerce.jpg";
-import chatApp from "@/assets/project-chat-app.jpg";
+import carSales from "@/assets/project-car-sales.jpg";
+import amazonSales from "@/assets/project-amazon-sales.jpg";
+import sqlAnalytics from "@/assets/project-sql-analytics.jpg";
+import imdbDashboard from "@/assets/project-imdb-dashboard.jpg";
 
 const projects = [
   {
-    title: "AI-Powered Analytics Dashboard",
+    title: "Car Sales Dashboard",
     description:
-      "Real-time data visualization platform with machine learning insights",
-    tags: ["React", "Python", "TensorFlow", "D3.js"],
-    image: aiDashboard,
+      "Interactive visualization showing car sales performance, brand trends, and KPIs",
+    tags: ["Tableau", "Data Visualization", "Analytics", "SQL"],
+    image: carSales,
+    demoLink: "#",
+    codeLink: "#",
   },
   {
-    title: "3D Ocean Explorer",
-    description: "Interactive WebGL experience showcasing marine ecosystems",
-    tags: ["Three.js", "React", "WebGL", "GSAP"],
-    image: oceanExplorer,
+    title: "Amazon Sales Dashboard",
+    description: "Analytics dashboard tracking product categories, sales growth, and revenue patterns",
+    tags: ["Power BI", "Sales Analytics", "Business Intelligence"],
+    image: amazonSales,
+    demoLink: "#",
+    codeLink: "#",
   },
   {
-    title: "E-Commerce Platform",
-    description: "Full-stack marketplace with payment integration",
-    tags: ["Next.js", "Node.js", "PostgreSQL", "Stripe"],
-    image: ecommerce,
+    title: "Customer Insights & Analytics Using SQL",
+    description: "Data-driven insights and trend analysis using SQL queries and visualization tools",
+    tags: ["SQL", "Data Analysis", "PostgreSQL", "Python"],
+    image: sqlAnalytics,
+    demoLink: "#",
+    codeLink: "#",
   },
   {
-    title: "Real-Time Chat Application",
-    description: "Scalable messaging platform with WebSocket support",
-    tags: ["React", "Socket.io", "Redis", "MongoDB"],
-    image: chatApp,
+    title: "IMDB Movies Interactive Dashboard – Tableau Project",
+    description: "Dashboard visualizing movie ratings, genres, and revenues",
+    tags: ["Tableau", "Data Visualization", "Entertainment Analytics"],
+    image: imdbDashboard,
+    demoLink: "#",
+    codeLink: "#",
   },
 ];
 
@@ -105,6 +113,7 @@ const ProjectsSection = () => {
                     variant="outline"
                     size="sm"
                     className="glass-card border-accent/30 hover:border-accent text-white"
+                    onClick={() => window.open(project.demoLink, '_blank')}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Live Demo
@@ -113,6 +122,7 @@ const ProjectsSection = () => {
                     variant="outline"
                     size="sm"
                     className="glass-card border-white/30 hover:border-white text-white"
+                    onClick={() => window.open(project.codeLink, '_blank')}
                   >
                     <Github className="w-4 h-4 mr-2" />
                     Code
