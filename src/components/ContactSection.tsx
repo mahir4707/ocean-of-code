@@ -83,41 +83,54 @@ const ContactSection = () => {
 
             {/* Contact Info */}
             <div className="space-y-6">
-              <div className="glass-card p-6 rounded-2xl hover:glow transition-all">
+              <a
+                href="mailto:mahirsama68@gmail.com"
+                className="glass-card p-6 rounded-2xl hover:glow transition-all block"
+              >
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-white mb-1">Email</h4>
-                    <p className="text-white/70">contact@portfolio.com</p>
+                    <p className="text-white/70">mahirsama68@gmail.com</p>
                   </div>
                 </div>
-              </div>
+              </a>
 
-              <div className="glass-card p-6 rounded-2xl hover:glow transition-all">
+              <a
+                href="https://www.linkedin.com/in/mahir-sama-7432902a5/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card p-6 rounded-2xl hover:glow transition-all block"
+              >
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-xl">
                     <Linkedin className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-white mb-1">LinkedIn</h4>
-                    <p className="text-white/70">linkedin.com/in/yourname</p>
+                    <p className="text-white/70">mahir-sama-7432902a5</p>
                   </div>
                 </div>
-              </div>
+              </a>
 
-              <div className="glass-card p-6 rounded-2xl hover:glow transition-all">
+              <a
+                href="https://github.com/mahir4707"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card p-6 rounded-2xl hover:glow transition-all block"
+              >
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl">
                     <Github className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-white mb-1">GitHub</h4>
-                    <p className="text-white/70">github.com/yourname</p>
+                    <p className="text-white/70">mahir4707</p>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </motion.div>
