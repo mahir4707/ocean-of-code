@@ -52,19 +52,6 @@ const HeroSection = () => {
       {/* Sunlight reflection on water */}
       <div className="absolute top-1/3 right-1/4 w-96 h-2 bg-yellow-100/20 rounded-full blur-2xl transform rotate-12"></div>
 
-      {/* Single DISCIPLINE Text - Centered, Top Half Visible */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ top: '-15%' }}>
-        <h1
-          className="text-[12rem] md:text-[18rem] lg:text-[24rem] font-black tracking-wider select-none"
-          style={{
-            color: "rgba(255, 255, 255, 0.25)",
-            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
-          }}
-        >
-          DISCIPLINE
-        </h1>
-      </div>
-
       {/* Content */}
       <div ref={textRef} className="relative z-10 text-center px-6">
         <h2 className="text-5xl md:text-7xl font-bold mb-4 text-white drop-shadow-2xl">
