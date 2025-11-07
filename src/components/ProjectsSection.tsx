@@ -10,6 +10,7 @@ import weatherApp from "@/assets/project-weather-app.jpg";
 import textSummarizer from "@/assets/project-text-summarizer.jpg";
 import openaiChatbot from "@/assets/project-openai-chatbot.jpg";
 import changeMaker from "@/assets/project-change-maker.jpg";
+import underwaterBg from "@/assets/underwater-ocean.jpg";
 
 const projects = [
   {
@@ -88,23 +89,36 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen py-20 relative"
+      className="min-h-screen py-20 px-6 relative overflow-hidden depth-fade"
       style={{
-        background: "linear-gradient(180deg, hsl(var(--ocean-deep)), hsl(var(--ocean-dark)))",
+        backgroundImage: `url(${underwaterBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center 60%",
+        backgroundAttachment: "fixed",
       }}
     >
+      {/* Underwater gradient overlay - deeper water */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/85 via-slate-950/90 to-gray-950/95 z-0" />
+      
+      {/* Faint light from above */}
+      <div className="absolute inset-0 opacity-5 z-0"
+        style={{
+          background: `radial-gradient(ellipse at 50% 0%, rgba(100, 220, 255, 0.15) 0%, transparent 30%)`,
+        }}
+      />
+
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16 relative z-10"
         >
-          <h2 className="text-5xl font-bold mb-4 text-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 underwater-text text-cyan-100">
             Featured Projects
           </h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Discover treasures from my portfolio
+          <p className="text-cyan-200/70 text-lg max-w-2xl mx-auto underwater-text">
+            A showcase of my data science and machine learning projects
           </p>
         </motion.div>
 
@@ -114,9 +128,9 @@ const ProjectsSection = () => {
               key={project.title}
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              whileHover={{ scale: 1.03 }}
-              className="glass-card rounded-2xl overflow-hidden group cursor-pointer"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -10 }}
+              className="backdrop-blur-md bg-gray-950/50 border border-cyan-500/20 rounded-xl overflow-hidden group hover:shadow-[0_0_40px_rgba(100,220,255,0.2)] transition-all duration-300 hover:border-cyan-400/40"
             >
               <div className="h-48 relative overflow-hidden">
                 <img
@@ -128,40 +142,52 @@ const ProjectsSection = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-white mb-3">
+                <h3 className="text-2xl font-bold mb-2 text-cyan-100 underwater-text group-hover:text-cyan-300 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-white/70 mb-4">{project.description}</p>
+                <p className="text-cyan-200/70 mb-4">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-white/10 rounded-full text-xs text-white/80"
+                      className="px-3 py-1 text-sm bg-cyan-500/20 text-cyan-300 rounded-full border border-cyan-500/30"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex gap-3">
+                <div className="flex gap-4 mt-6">
                   <Button
                     variant="outline"
                     size="sm"
-                    className="glass-card border-accent/30 hover:border-accent text-white"
-                    onClick={() => window.open(project.demoLink, '_blank')}
+                    className="group/btn bg-cyan-950/40 border-cyan-500/30 text-cyan-200 hover:bg-cyan-500/20 hover:border-cyan-400/50 hover:text-cyan-100"
+                    asChild
                   >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Live Demo
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Live Demo
+                    </a>
                   </Button>
                   <Button
                     variant="outline"
                     size="sm"
-                    className="glass-card border-white/30 hover:border-white text-white"
-                    onClick={() => window.open(project.codeLink, '_blank')}
+                    className="group/btn bg-cyan-950/40 border-cyan-500/30 text-cyan-200 hover:bg-cyan-500/20 hover:border-cyan-400/50 hover:text-cyan-100"
+                    asChild
                   >
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
+                    <a
+                      href={project.codeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      View Code
+                    </a>
                   </Button>
                 </div>
               </div>
