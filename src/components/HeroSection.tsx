@@ -51,9 +51,12 @@ const HeroSection = () => {
       {/* Sunlight reflection on water */}
       <div className="absolute top-1/4 right-1/4 w-96 h-2 bg-yellow-100/20 rounded-full blur-2xl transform rotate-12"></div>
 
+<<<<<<< HEAD
       
   
 
+=======
+>>>>>>> 662f545c50d9a2a8260a60e486ed829e4c91ca32
       {/* Content */}
       <div ref={textRef} className="relative z-10 text-center px-6">
         <h2 className="text-5xl md:text-7xl font-bold mb-4 text-white drop-shadow-2xl">

@@ -7,6 +7,8 @@ import SkillsSection from "@/components/SkillsSection";
 import ToolsSection from "@/components/ToolsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
+import UnderwaterEffects from "@/components/UnderwaterEffects";
+import SoundToggle from "@/components/SoundToggle";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,6 +22,8 @@ const Index = () => {
     <div className="relative overflow-x-hidden">
       <Navigation />
       <HeroSection />
+      <UnderwaterEffects />
+      <SoundToggle />
       <SkillsSection />
       <ToolsSection />
       <ProjectsSection />

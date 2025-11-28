@@ -1,6 +1,7 @@
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { FileText, Table, Presentation, BarChart3, PieChart, Bot, Palette, Code2, FileCode2, Database } from "lucide-react";
+import underwaterBg from "@/assets/underwater-ocean.jpg";
 
 const tools = [
   {
@@ -74,39 +75,36 @@ const ToolsSection = () => {
   return (
     <section
       id="tools"
-      className="min-h-screen py-20 relative"
+      className="min-h-screen py-20 px-6 relative overflow-hidden depth-fade"
       style={{
-        background: "linear-gradient(180deg, hsl(var(--ocean-deep)), hsl(var(--ocean-dark)))",
+        backgroundImage: `url(${underwaterBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center 30%",
+        backgroundAttachment: "fixed",
       }}
     >
-      {/* Animated floating particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(25)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-3 h-3 bg-accent/15 rounded-full animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 6}s`,
-              animationDuration: `${6 + Math.random() * 6}s`,
-            }}
-          />
-        ))}
-      </div>
+      {/* Underwater gradient overlay - mid depth */}
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-950/70 via-blue-950/80 to-slate-900/85 z-0" />
+      
+      {/* Subtle light rays */}
+      <div className="absolute inset-0 opacity-10 animate-water-ripple z-0"
+        style={{
+          background: `radial-gradient(ellipse at 50% 10%, rgba(100, 220, 255, 0.2) 0%, transparent 40%)`,
+        }}
+      />
 
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16 relative z-10"
         >
-          <h2 className="text-5xl font-bold mb-4 text-white">
-            Tools
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 underwater-text text-cyan-100">
+            Professional Tools
           </h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Professional tools that power productivity and creativity
+          <p className="text-cyan-200/80 text-lg max-w-2xl mx-auto underwater-text">
+            Industry-standard tools and technologies I work with
           </p>
         </motion.div>
 
@@ -118,19 +116,23 @@ const ToolsSection = () => {
                 key={tool.name}
                 initial={{ opacity: 0, y: 50, scale: 0.9 }}
                 animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
-                whileHover={{ scale: 1.05, y: -15 }}
-                className="glass-card p-6 rounded-2xl hover:glow transition-all duration-300 cursor-pointer group"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05, y: -8 }}
+                className="backdrop-blur-md bg-slate-900/40 border border-cyan-500/20 p-6 rounded-xl group hover:shadow-[0_0_30px_rgba(100,220,255,0.2)] transition-all duration-300 hover:border-cyan-400/40"
               >
                 <div className="flex flex-col items-center text-center gap-4">
-                  <div className={`p-4 rounded-xl bg-gradient-to-br ${tool.color} group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon className="w-8 h-8 text-white" />
+                  <div
+                    className="w-16 h-16 rounded-xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-[0_0_20px_rgba(100,220,255,0.3)]"
+                  >
+                    <div className={`p-4 rounded-xl bg-gradient-to-br ${tool.color} group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white mb-2">
+                    <h3 className="text-xl font-semibold mb-2 text-cyan-100 underwater-text group-hover:text-cyan-300 transition-colors">
                       {tool.name}
                     </h3>
-                    <p className="text-sm text-white/70">{tool.description}</p>
+                    <p className="text-cyan-200/70 text-sm">{tool.description}</p>
                   </div>
                 </div>
               </motion.div>
