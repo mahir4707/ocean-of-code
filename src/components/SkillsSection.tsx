@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { FileCode, Coffee, FileType, Database } from "lucide-react";
+import { FileCode, Coffee, FileType, Database, BarChart } from "lucide-react";
 
 const skills = [
   {
@@ -29,6 +29,13 @@ const skills = [
     icon: Database,
     level: 90,
     description: "Database design, queries, and optimization",
+    color: "from-cyan-500 to-teal-500",
+  },
+  {
+    name: "Data Analysis",
+    icon: BarChart,
+    level: 95,
+    description: "Data cleaning, visualization, and statistical analysis",
     color: "from-cyan-500 to-teal-500",
   },
 ];
