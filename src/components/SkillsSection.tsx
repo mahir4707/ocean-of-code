@@ -1,11 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-<<<<<<< HEAD
 import { FileCode, Coffee, FileType, Database, BarChart } from "lucide-react";
-=======
-import { FileCode, Coffee, FileType, Database } from "lucide-react";
-import underwaterBg from "@/assets/underwater-ocean.jpg";
->>>>>>> 662f545c50d9a2a8260a60e486ed829e4c91ca32
 
 const skills = [
   {
